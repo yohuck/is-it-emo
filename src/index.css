@@ -47,3 +47,18 @@ label{
   background: var(--gradient-11);
 
 }
+
+.result{
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.anger{
+  background-color: red;
+}
+
+.sadness{
+  background-color: blue;
+  color: white;
+}
