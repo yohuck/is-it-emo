@@ -12,7 +12,7 @@ function App() {
     <div className="container">
     <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
     <EnterSong />
-    <Meter />
+    {/* <Meter /> */}
     </div>
   );
 }
