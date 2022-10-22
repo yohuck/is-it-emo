@@ -1,17 +1,19 @@
-import { gsap } from "gsap";
+import { gsap, Bounce, Elastic } from "gsap";
 
 let toggle = false;
 
+
+
 const onClick = () => {
     if (toggle){
-        gsap.to(".pointer", { rotation: 60, ease: "bounce-out"})
-        gsap.to(".meter-body-left", { backgroundColor: 'var(--red-6)'})
-        gsap.to(".meter-body-right", { backgroundColor: 'var(--red-6)'})
+        gsap.to(".pointer", { rotation: 60, ease:Bounce.easeOut})
+        gsap.to(".meter-body-left", 1, { backgroundColor: '#EA7179'})
+        gsap.to(".meter-body-right",1, { backgroundColor: '#EA7179'})
         toggle = !toggle
     } else {
-        gsap.to(".pointer", { rotation: -60, ease: "bounce-out"})
-        gsap.to(".meter-body-left", { backgroundColor: 'var(--green-6)'})
-        gsap.to(".meter-body-right", { backgroundColor: 'var(--green-6)'})
+        gsap.to(".pointer", { rotation: -60, ease:Bounce.easeOut})
+        gsap.to(".meter-body-left",1, { backgroundColor: '#F5CCE8'})
+        gsap.to(".meter-body-right", 1,{ backgroundColor: '#F5CCE8'})
         toggle = !toggle
     
 }
@@ -29,8 +31,9 @@ function Results() {
                         <div className="meter-pointer"></div>
                     </div>
                     <div className="pointer"></div>
+                    <button onClick={onClick} className="meter-button clip">Is it Emo?</button>
+
                 </section>
-                <button onClick={onClick}>Click</button>
             </div>
     );
   }
